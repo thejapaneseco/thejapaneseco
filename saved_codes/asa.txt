@@ -1,0 +1,20 @@
+<?php
+if (isset($_GET['fileName'])) {
+    $fileName = $_GET['fileName'];
+
+    if (empty($fileName)) {
+        echo "File name cannot be empty.";
+        exit;
+    }
+
+    $filePath = 'saved_codes/' . $fileName . '.txt';
+
+    if (file_exists($filePath)) {
+        echo file_get_contents($filePath);
+    } else {
+        echo "File not found.";
+    }
+} else {
+    echo "No file name provided.";
+}
+?>

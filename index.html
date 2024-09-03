@@ -7,34 +7,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Start of Async Drift Code -->
+<script>
+	"use strict";
+	
+	!function() {
+	  var t = window.driftt = window.drift = window.driftt || [];
+	  if (!t.init) {
+		if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+		t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+		t.factory = function(e) {
+		  return function() {
+			var n = Array.prototype.slice.call(arguments);
+			return n.unshift(e), t.push(n), t;
+		  };
+		}, t.methods.forEach(function(e) {
+		  t[e] = t.factory(e);
+		}), t.load = function(t) {
+		  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+		  o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+		  var i = document.getElementsByTagName("script")[0];
+		  i.parentNode.insertBefore(o, i);
+		};
+	  }
+	}();
+	drift.SNIPPET_VERSION = '0.3.1';
+	drift.load('zg9u25tr92gc');
+	</script>
+	<!-- End of Async Drift Code -->
 	</head>
-	<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('zg9u25tr92gc');
-</script>
-<!-- End of Async Drift Code -->
+	<style>
+		#hidden-textbox-container {
+			display: none; /* Initially hidden */
+			margin-top: 20px;
+		}
+	</style>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -102,6 +110,16 @@ drift.load('zg9u25tr92gc');
 							<h2>/</h2>
 							<p>/</p>
 						</article>
+						<article class="thumb">
+							<a href="images/fulls/h9.png" class="image"><img src="images/thumbs/h9.png" alt="" /></a>
+							<h2>/</h2>
+							<p>/</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/h10.jpg" class="image"><img src="images/thumbs/h10.jpg" alt="" /></a>
+							<h2>/</h2>
+							<p>/</p>
+						</article>
 						
 					</div>
 
@@ -121,7 +139,7 @@ drift.load('zg9u25tr92gc');
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" id="linkedin-icon" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 									</ul>
 								</section>
 								<p class="copyright">
@@ -155,17 +173,25 @@ drift.load('zg9u25tr92gc');
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<!-- Start of Async Drift Code -->
-			<!-- Start of Async Drift Code -->
+	
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	<!-- End of Async Drift Code -->
+	<script>
+        let clickCount = 0;
 
-	</body>
+        document.getElementById("linkedin-icon").addEventListener("click", function() {
+            clickCount++;
+            if (clickCount === 5) {
+                window.location.href = "about.html"; // Redirect to the new page
+            }
+        });
+    </script>
+
+</body>
 </html>
